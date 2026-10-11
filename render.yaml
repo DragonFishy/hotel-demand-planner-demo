@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hotel-demand-planner
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: BUNDLE_REPO
+        value: DragonFishy/hotel-demand-planner-bundle
+      - key: HF_TOKEN
+        sync: false
